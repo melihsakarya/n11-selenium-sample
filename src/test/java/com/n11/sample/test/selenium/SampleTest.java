@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.util.Date;
 import java.util.List;
 
 public class SampleTest {
@@ -21,8 +22,15 @@ public class SampleTest {
         List<WebElement> webElemanlari = driver.findElements(By.tagName("a"));
         System.out.println(webElemanlari.size());
 
-        WebElement ilkEleman = webElemanlari.get(0);
-        ilkEleman.click();
+
+        for (WebElement element: webElemanlari) {
+            String elementText = element.getText();
+
+            if(elementText.length() > 10){
+                System.out.println(elementText.toUpperCase());
+            }
+        }
+
 
 
 

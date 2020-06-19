@@ -18,4 +18,19 @@ public class N11SearchTest extends BaseTest{
         WebElement searchBtn = driver.findElement(By.className("searchBtn"));
         searchBtn.click();
     }
+
+    @Test
+    public void loginTest(){
+
+        clickBy(By.className("btnSignIn"));
+        setById("email", "melih@testinium.com");
+        setById("password", "123456");
+        clickBy(By.id("loginButton"));
+    }
+
+
+
+
 }
+
+//N11 e girip kullanici sifre girip login ol
